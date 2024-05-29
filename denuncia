@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario de Denuncia Anónima</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <form id="reportForm" action="/submit-report" method="POST">
+        <label for="description">Descripción del Incidente:</label>
+        <textarea id="description" name="description" required></textarea>
+
+        <label for="date">Fecha y Hora:</label>
+        <input type="datetime-local" id="date" name="date" required>
+
+        <label for="location">Ubicación del Incidente:</label>
+        <input type="text" id="location" name="location">
+
+        <label for="category">Categoría:</label>
+        <select id="category" name="category" required>
+            <option value="genderViolence">Violencia de Género</option>
+            <option value="bullying">Bullying</option>
+            <option value="harassment">Acoso</option>
+            <option value="assault">Asalto</option>
+        </select>
+
+        <label for="evidence">Adjuntar Evidencia:</label>
+        <input type="file" id="evidence" name="evidence">
+
+        <button type="submit">Enviar Denuncia</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
